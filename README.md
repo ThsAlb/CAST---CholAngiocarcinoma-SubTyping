@@ -14,7 +14,7 @@ Emerging evidence substantiated that there are two main histological phenotypes 
 We used our established EfficientNET B3 pipeline (see HEPNET). Training occured in a cross-validation manner with weights precalibrated to ImageNet. After transfer learning, we finetuned every layer according to our dataset.
 
 ## How to use
-The final model including its weights can be downloaded in the folder /model. It can be applied to any image tile with 300 x 300 pixel entry dimensions. We recommend QuPath for image partitioning and prior color normalization (via the Macenko method). The model will output a probability of the tile to represent small duct or large duct subtype (sigmoid function).
+The final model, including its weights, can be downloaded in the folder /model. It can be applied to any image tile with 300 x 300 pixel entry dimensions. We recommend QuPath for image partitioning and prior color normalization (via the Macenko method). The model will output a probability of the tile to represent small duct or large duct subtype (sigmoid function).
 
 ## Dependencies
 Linux (Tested on Ubuntu 18.04)
