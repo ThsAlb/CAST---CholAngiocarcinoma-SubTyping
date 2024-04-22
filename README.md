@@ -11,7 +11,7 @@ This is the source code for a deep learning model for histological classificatio
 Emerging evidence substantiated that there are two main histological phenotypes of intrahepatic cholangiocarcinoma: a small duct and a large duct phenotype. These subtypes come along with etiologic, predictive and prognostic implications; however, correct classification requires distinct expertise in hepatobiliary pathology. We here present an artifical intelligence-based model for universal and rapid classification of intrahepatic cholangiocarcinoma, based on thoroughly characterized internal and external cohorts.
 
 ## Model architecture
-We used our established EfficientNET B3 pipeline (see [HEPNET](https://github.com/ThsAlb/HEPNET-Hepatic-adenocarcinoma-classification/tree/main/scripts)). Training occured in a cross-validation manner with weights precalibrated to ImageNet. After transfer learning, we finetuned every layer according to our dataset.
+We used our established EfficientNET B3 pipeline (see [HEPNET](https://github.com/ThsAlb/HEPNET-Hepatic-adenocarcinoma-classification/tree/main/scripts)). Training occured in a cross-validation manner with weights precalibrated to ImageNet. After transfer learning with frozen base, we finetuned every layer according to our dataset.
 
 ## How to use
 The final model, including its weights, can be downloaded in the folder /model. It can be applied to any image tile with 300 x 300 pixel entry dimensions. We recommend QuPath for image partitioning and prior color normalization (via the Macenko method). The model will output a probability of the tile to represent small duct or large duct subtype (sigmoid function).
